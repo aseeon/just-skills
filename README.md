@@ -38,6 +38,10 @@ Each `SKILL.md` starts with YAML frontmatter carrying `name` and `description`, 
 2. Give it frontmatter with a `name` matching the folder and a `description` that says when the skill applies.
 3. Add a row to the table above.
 
+## Acknowledgments
+
+The plainspeak skill is an opinionated synthesis of poteto's unslop and astra's model guidance
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
