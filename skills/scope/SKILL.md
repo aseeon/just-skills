@@ -100,4 +100,4 @@ If the user stopped early, hand back the draft with its open questions and stop.
 
 ## 5. Failsafe
 
-If file access is unavailable, provide the document text and state that it has not been saved as well as the reason.
+If file access is unavailable, return the document text and state why it was not saved.

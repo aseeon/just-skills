@@ -1,0 +1,5 @@
+interface:
+  display_name: Spec
+  short_description: Turn an agreed scope into a technical specification.
+policy:
+  allow_implicit_invocation: false

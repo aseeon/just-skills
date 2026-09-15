@@ -22,6 +22,7 @@ The CLI writes the skill into your agent's skills directory (`.claude/skills/` f
 | --- | --- |
 | [plainspeak](skills/plainspeak/SKILL.md) | Use plain language and cut AI tells from any writing. Applies to all output. |
 | [scope](skills/scope/SKILL.md) | Invoke explicitly to gather requirements through questioning and brainstorming, then write docs/scope.md. |
+| [spec](skills/spec/SKILL.md) | Invoke explicitly to turn a scope file into a technical specification in docs/spec-<feature-name>.md. |
 
 ## Layout
 
@@ -49,6 +50,11 @@ The scope skill draws on four approaches:
 - [mattpocock domain-modeling](https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md) contributes precise terms and concrete boundary cases. Scope keeps definitions with the work unless the repo requires separate records.
 - [mattpocock grilling](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md) contributes relentless questioning in dependency order and agent-led fact finding. Scope limits rounds to seven relevant questions and supports stopping early with a draft and open questions.
 - [cursor/pstack figure-it-out](https://github.com/cursor/plugins/blob/main/pstack/skills/figure-it-out/SKILL.md) contributes measurable success and early investigation of risky unknowns. Scope captures verification requirements without taking on execution or its plugin dependencies.
+
+The spec skill draws on two approaches:
+
+- [mattpocock to-spec](https://github.com/mattpocock/skills/blob/main/skills/engineering/to-spec/SKILL.md) contributes repo context, design decisions, and tests of observable behavior. Spec uses the scope file as its input and maps its requirement and acceptance IDs to design and verification.
+- [cursor/pstack technical-writing](https://github.com/cursor/plugins/blob/main/pstack/skills/technical-writing/SKILL.md) contributes consistent terminology, exact identifiers, and clear sentences. Spec delegates general writing rules to plainspeak and keeps one document focused on the technical design.
 
 ## License
 
