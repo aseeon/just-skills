@@ -1,0 +1,5 @@
+interface:
+  display_name: Scope
+  short_description: Gather requirements and write the agreed scope.
+policy:
+  allow_implicit_invocation: false
