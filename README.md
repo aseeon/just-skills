@@ -4,21 +4,33 @@ Agent skills by [@aseeon](https://github.com/aseeon), installable with the [`ski
 
 ## Install
 
+To install every skill in this repo (recommended, as this repo is intentionally kept as small as possible):
+
+```bash
+npx skills add https://github.com/aseeon/skills
+```
+
 To install a chosen skill from the repo:
 
 ```bash
 npx skills add https://github.com/aseeon/skills --skill chosen_skill
 ```
 
-To install every skill in this repo:
-
-```bash
-npx skills add https://github.com/aseeon/skills
-```
-
 The CLI writes the skill into your agent's skills directory (`.claude/skills/` for Claude Code, and the equivalent path for other supported agents).
 
-## Skills
+## Intended workflow
+
+
+Manually invokable skills:
+1. /scope - gather requirements through questioning and brainstorming
+2. /spec - turn scope file into technical specification
+3. /slice - break specification into tickets *(To be added)*
+4. /implement - implement the tickets *(To be added)*
+5. /verify - verify implementation *(To be added)*
+
+Automatically applied helper skill: /plainspeak - make all the talking and output documents more pleasant
+
+## Skills Inventory
 
 | Skill | Description |
 | --- | --- |
@@ -26,21 +38,6 @@ The CLI writes the skill into your agent's skills directory (`.claude/skills/` f
 | [scope](skills/scope/SKILL.md) | Invoke explicitly to gather requirements through questioning and brainstorming, then write scope document |
 | [spec](skills/spec/SKILL.md) | Invoke explicitly to turn a scope file into a technical specification |
 
-## Layout
-
-```
-skills/
-  <skill-name>/
-    SKILL.md
-```
-
-Each `SKILL.md` starts with YAML frontmatter carrying `name` and `description`, followed by the instructions.
-
-## Adding a skill
-
-1. Create `skills/<skill-name>/SKILL.md`.
-2. Give it frontmatter with a `name` matching the folder and a `description` that says when the skill applies.
-3. Add a row to the table above.
 
 ## Acknowledgments
 
