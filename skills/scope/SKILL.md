@@ -1,26 +1,26 @@
 ---
 name: scope
-description: Scope a feature or change by questioning the user and inspecting the repo, then write the agreed requirements to docs/scope.md.
+description: Scope a feature or change by questioning the user and inspecting the repo, then write the agreed requirements to docs/scope-<feature-name>.md.
 disable-model-invocation: true
 ---
 
 # Scope
 
-Gather extensive requirements through relentless questioning and brainstorming with the user. Ground the discussion in the repo and record the entire agreed scope in `docs/scope.md`, unless the user specifies another location.
+Gather extensive requirements through relentless questioning and brainstorming with the user. Ground the discussion in the repo and record the entire agreed scope in `docs/scope-<feature-name>.md`, unless the user specifies another location.
 
 This skill ends with the scope document. Slicing, cutting scope, preparing tickets, implementation, and delivery planning are outside its remit.
 
 Record exclusions the user chooses. Do not propose cuts, smaller versions, or phases.
 
+If existing repo cannot be found, inform the user about that fact and assume that the current working directory is equivalent to the repo for the purpose of this skill.
+
 ## 1. Ground the request
 
-Read the repo's instructions, relevant docs, code, and tests. Read only enough to describe current behavior and answer factual questions. Stop tracing a path once it no longer affects a requirement. Cite evidence as file paths with the function, class, or test name. If access to an existing repo is missing, request it and continue questions that do not depend on inspection.
+Read the repo's instructions, relevant docs, code, and tests. Read only enough to describe current behavior relevant to the feature or change being scoped and answer factual questions. Stop tracing a path once it no longer affects a requirement. Cite evidence as file paths with the function, class, or test name.
 
-If there is no repo, say so, skip the evidence steps, and ask the user where to save the document. If file access is unavailable, provide the document text and state that it has not been saved.
+Check the target path early, using the user's requested path or `docs/scope-<feature-name>.md` by default. If a file there already exists ask the user if it should be replaced or if the current scope filename should be changed. Preserve the existing file while awaiting the answer.
 
-Check the target path early, using the user's requested path or `docs/scope.md` by default. If a file there describes different work, ask in the first round whether to replace it or use `docs/scope-<feature-name>.md`. Preserve the existing file while awaiting the answer.
-
-Finding facts is your job. Investigate what the repo can answer; ask the user for goals and decisions. Keep questions that depend on unfinished research pending while advancing the rest.
+Finding facts is your job. Investigate what the repo can answer. Ask the user for goals and decisions. Keep questions that depend on unfinished research pending while advancing the rest.
 
 ## 2. Grill in rounds
 
@@ -28,7 +28,7 @@ Finding facts is your job. Investigate what the repo can answer; ask the user fo
 
 Map a decision tree. Each answer can unlock further decisions. Give each question a stable ID (Q1, Q2, ...) and keep it across rounds. Show only the questions being asked in the current round.
 
-Ask a question only if its answer would change a requirement, a boundary, or an acceptance criterion. Drop questions that only affect implementation.
+Ask a question only if its answer would change a requirement, a boundary, or an acceptance criterion. Drop questions that would only affect technical specification or implementation.
 
 Ask at most 7 questions per round. Choose questions whose prerequisites are settled and whose answers unlock the most other decisions. In the first round, ask who needs the change and for a concrete before/after example, unless already answered.
 
@@ -69,7 +69,7 @@ Record permissions, data, and interfaces as required behavior. For example, "Onl
 
 Write the complete scope to the target path established in section 1, creating its parent folder if needed. For an existing document about the same work, preserve agreed requirements unless superseded.
 
-Start the file with "Status: Draft". Change it to "Status: Confirmed" only after the user confirms the document. Reopen it as a draft when requirements change.
+Start the file with "Status: Draft". Change it to "Status: Confirmed" only after the user confirms the document and there are no open questions left.
 
 Capture the entire scope discussed, including supporting requirements and edge cases. Consolidate repeated answers and retain the final decision when an earlier answer was superseded. Distinguish agreed requirements from ideas the user rejected or explicitly excluded.
 
@@ -84,7 +84,7 @@ Always include Requirements, Acceptance criteria, and Open questions. Adapt or o
 - **Interfaces and dependencies:** affected systems and required interactions.
 - **Constraints and quality requirements:** agreed limits and operating expectations.
 - **Failure and edge cases:** expected behavior when the normal flow breaks down.
-- **Acceptance criteria:** observable conditions that establish each requirement is met, each referencing the applicable requirement IDs.
+- **Acceptance criteria:** observable conditions that establish each requirement is met, each with a unique, stable ID (AC1, AC2, and so on) and references to the applicable requirement IDs. Keep IDs stable through revisions.
 - **Decisions and rationale:** agreed choices, reasons, and accepted assumptions.
 - **Open questions:** unresolved items with their question IDs, dependencies, and what would resolve them; write "None" when empty.
 
@@ -92,6 +92,12 @@ Write requirements precisely enough for another reader to understand the work wi
 
 ## 4. Check completeness
 
-Check the document against the entire discussion. Account for every agreed requirement. Verify that every requirement ID has an acceptance criterion and every acceptance reference points to an existing requirement. Resolve contradictions, omissions, and vague language through further questions, unless the user stopped early; then record them under "Open questions".
+Check the document against the entire discussion. Account for every agreed requirement. Verify that each acceptance criterion has a unique AC ID, every requirement ID has an acceptance criterion, and every acceptance reference points to an existing requirement. Resolve contradictions, omissions, and vague language through further questions, unless the user stopped early; then record them under "Open questions".
 
-Link the written file and ask the user to confirm that it captures the full scope. Corrections reopen the relevant branches and update the file. Finish when no relevant scope questions remain, the user confirms the document, and the file contains the complete agreed requirements. If the user stopped early, hand back the draft with its open questions and stop.
+Link the written file and ask the user to confirm that it captures the full scope. Corrections reopen the relevant branches and update the file. Finish when no relevant scope questions remain, the user confirms the document, and the file contains the complete agreed requirements with no open questions left. 
+
+If the user stopped early, hand back the draft with its open questions and stop.
+
+## 5. Failsafe
+
+If file access is unavailable, provide the document text and state that it has not been saved as well as the reason.
