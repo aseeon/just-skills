@@ -44,12 +44,9 @@ Automatically applied helper skill: /plainspeak - make all the talking and outpu
 ## Acknowledgments
 
 The plainspeak skill is an opinionated synthesis of poteto's unslop and astra's model guidance
-
 The scope would not exist without the prior work from obra (brainstorming), mattpocock (domain-modeling and grilling) and poteto (figure-it-out).
-
 The spec skill is inspired by work from mattpocock (to-spec) and poteto (technical-writing).
-
-The design skill draws on [Dammyjay93's interface-design](https://github.com/Dammyjay93/interface-design/blob/main/.claude/skills/interface-design/SKILL.md) and [Anthropic's frontend-design](https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md).
+The design skill draws inspiration from on Dammyjay93's interface-design skill and Anthropic's frontend-design.
 
 ## License
 
