@@ -49,7 +49,7 @@ The scope would not exist without the prior work from obra (brainstorming), matt
 
 The spec skill is inspired by work from mattpocock (to-spec) and poteto (technical-writing).
 
-The design skill draws inspiration from on Dammyjay93's interface-design skill and Anthropic's frontend-design.
+The design skill draws inspiration from Dammyjay93's interface-design skill and Anthropic's frontend-design.
 
 ## License
 
