@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 Gather extensive requirements through relentless questioning and brainstorming with the user. Ground the discussion in the repo and record the entire agreed scope in `docs/scope-<feature-name>.md`, unless the user specifies another location.
 
-This skill ends with the scope document. Slicing, cutting scope, preparing tickets, implementation, and delivery planning are outside its remit.
+This skill ends with the scope document. UI/UX design, architecture, program design, slicing and preparing tickets, implementation, quality assurance and delivery planning are outside its responsibilities.
 
 Record exclusions the user chooses. Do not propose cuts, smaller versions, or phases.
 

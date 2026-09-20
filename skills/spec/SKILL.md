@@ -16,6 +16,8 @@ If no repo can be found, inform the user about that fact and assume that the cur
 
 Read the supplied scope file in full. If none is given, look for `docs/scope-*.md` - ask the user to choose when the intended file is unclear.
 
+Read any supplied design document or matching `docs/design-<feature-name>.md`. Design is optional. If present, require `Status: Confirmed` with no open questions, or `Status: Not needed`; otherwise stop and ask the user to finish design first. Link the design in the specification and carry agreed UI/UX decisions and D IDs into it. Surface conflicts with scope or technical constraints to the user and resolve them before proceeding with dependent work.
+
 ## 2. Stop early if the scope is missing or unconfirmed
 
 If no scope file was found, stop this skill and ask the user to run the scope skill to create one first.
