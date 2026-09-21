@@ -12,13 +12,13 @@ Agent skills by [@aseeon](https://github.com/aseeon), installable with the [`ski
 To install every skill in this repo (recommended, as this repo is intentionally kept as small as possible):
 
 ```bash
-npx skills add https://github.com/aseeon/skills
+npx skills add https://github.com/aseeon/just-skills
 ```
 
 To install a chosen skill from the repo:
 
 ```bash
-npx skills add https://github.com/aseeon/skills --skill chosen_skill
+npx skills add https://github.com/aseeon/just-skills --skill chosen_skill
 ```
 
 > The Skills CLI writes the skill into your agent's skills directory (`.claude/skills/` for Claude Code, and the equivalent path for other supported agents).
