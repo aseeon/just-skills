@@ -1,10 +1,10 @@
 ---
-name: design
+name: just-design
 description: Resolve UI/UX decisions with the user after scope is confirmed, then save the agreed design to docs/design-<feature-name>.md.
 disable-model-invocation: true
 ---
 
-# Design
+# Just Design
 
 Turn a confirmed scope into an agreed UI/UX design for customer or internal interfaces. Always write a design document when invoked; add mockups when they help settle decisions. End with the document. Technical architecture, task slicing, and production implementation belong to later work.
 

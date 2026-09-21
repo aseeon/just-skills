@@ -1,10 +1,10 @@
 ---
-name: spec
+name: just-spec
 description: Turn a scope file into a technical specification grounded in the repo, saved to docs/spec-<feature-name>.md.
 disable-model-invocation: true
 ---
 
-# Spec
+# Just Spec
 
 Turn the given scope into a design another engineer or agent can implement without the conversation.
 
@@ -20,7 +20,7 @@ Read any supplied design document or matching `docs/design-<feature-name>.md`. D
 
 ## 2. Stop early if the scope is missing or unconfirmed
 
-If no scope file was found, stop this skill and ask the user to run the scope skill to create one first.
+If no scope file was found, stop this skill and ask the user to run the just-scope skill to create one first.
 
 If the scope is not `Status: Confirmed`, stop and ask the user to finish scoping first.
 
@@ -37,7 +37,7 @@ Choose the simplest design that satisfies the full scope. Define component respo
 
 Explain consequential choices and why credible alternatives lose. Resolve technical facts from evidence. Ask the user only about decisions that evidence cannot settle and that materially change the design. Give a recommendation and trade-off, then wait for the answer before making dependent design decisions. Record unanswered decisions in the "Unanswered decisions" section.
 
-If the design requires a scope change, surface the conflict to the user. Preserve existing work and stop. Do not edit the scope. Ask the user to update it with the scope skill, then rerun spec.
+If the design requires a scope change, surface the conflict to the user. Preserve existing work and stop. Do not edit the scope. Ask the user to update it with the just-scope skill, then rerun just-spec.
 
 ## 5. Write the specification
 

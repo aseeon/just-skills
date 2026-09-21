@@ -1,5 +1,5 @@
 interface:
-  display_name: Design
+  display_name: "Just Design"
   short_description: Resolve UI/UX decisions and write the agreed design.
 policy:
   allow_implicit_invocation: false

@@ -1,10 +1,10 @@
 ---
-name: scope
+name: just-scope
 description: Scope a feature or change by questioning the user and inspecting the repo, then write the agreed requirements to docs/scope-<feature-name>.md.
 disable-model-invocation: true
 ---
 
-# Scope
+# Just Scope
 
 Gather extensive requirements through relentless questioning and brainstorming with the user. Ground the discussion in the repo and record the entire agreed scope in `docs/scope-<feature-name>.md`, unless the user specifies another location.
 
