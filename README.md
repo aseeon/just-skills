@@ -42,7 +42,7 @@ flowchart LR
 | # | Skill | What it does | Status |
 |:-:|---|---|:-:|
 | 1 | `/just-scope` | gather requirements through questioning and brainstorming | ✅ |
-| 2 | `/just-design` | agree UI/UX decisions and write a design document, with mockups when useful | ✅ |
+| 2 | `/just-design` | agree on UI/UX decisions and write a design document, with mockups when useful | ✅ |
 | 4 | `/just-spec` | turn scope and any agreed design into technical specification | 🛠️ In Progress |
 | 5 | `/just-slice` | break specification into tickets | 🚧 To be added |
 | 6 | `/just-implement` | implement the tickets | 🚧 To be added |
