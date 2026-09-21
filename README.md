@@ -58,7 +58,7 @@ These skills would not exist without the things i learned from the following hum
 - [obra](https://github.com/obra)
 - [mattpocock](https://github.com/mattpocock)
 - [Dammyjay93](https://github.com/Dammyjay93)
-- Both Anthropic and OpenAI teams for their model guidence docs
+- Both Anthropic and OpenAI teams for their model guidance docs
 
 ## License
 
