@@ -27,7 +27,7 @@ When citing a source name it clearly or do not cite it at all. Instead of vague 
 
 ### Punctuation
 
-Never use em dashes. Use periods or commas when needed. Use colons only when listing a number of things. Do not use decorative emojis. Replace curly quotes with straight quotes. Do not overuse boldface and italics.
+Never use em dashes. Never use semicolons. Use periods or commas when needed. Use colons only when listing a number of things. Do not use decorative emojis. Replace curly quotes with straight quotes. Do not overuse boldface and italics.
 
 ### Overpraising
 
